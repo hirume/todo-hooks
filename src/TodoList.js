@@ -1,20 +1,12 @@
 import React from "react";
-import {TodoItem} from './TodoItem';
-import Paper from '@material-ui/core/Paper';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-
+import { TodoItem } from "./TodoItem";
+import List from "@material-ui/core/List";
 
 
 export const TodoList = ({ todos }) => (
-
-    <List>
-      {todos.map(todo => (
-          
-        <TodoItem key={todo.id} todo={todo} />
-        
-      ))}
-    </List>
-
-  );
-
+  <List>
+    {todos.map(todo => (
+      <TodoItem key={todo.id} todo={todo} />
+    ))}
+  </List>
+);
