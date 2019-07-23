@@ -1,4 +1,3 @@
-import React from "react";
 import uuid from "uuid/v4";
 
 export const filterReducer = (state, action) => {

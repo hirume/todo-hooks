@@ -7,11 +7,13 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
+import { useStyles } from './styles';
 import './index.css'
 
 export const TodoContext = createContext(null);
 
 export const TodoItem = ({ todo }) => {
+  const classes = useStyles();
   const dispatch = useContext(TodoContext);
   const [txt, setTxt] = useState(todo.text || "");
 
@@ -55,7 +57,7 @@ export const TodoItem = ({ todo }) => {
         <Checkbox checked={todo.complete} onChange={handleToggle} />
       </ListItemIcon>
       {todo.editing ? (
-        <form className='edit-form' onSubmit={handleEditSubmit}>
+        <form className={classes.form} onSubmit={handleEditSubmit}>
           <TextField value={txt} onChange={handleChange} fullWidth >
             {txt}
           </TextField>
