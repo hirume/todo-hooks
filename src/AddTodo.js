@@ -13,9 +13,7 @@ export const AddTodo = () => {
     if (text) {
       dispatch({ type: "ADD_TODO", text });
     }
-
     setText("");
-
     event.preventDefault();
   };
 
@@ -23,14 +21,9 @@ export const AddTodo = () => {
 
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
-      <TextField
-        name="text"
-        label="New Todo"
-        value={text}
-        onChange={handleChange}
-      />
+      <TextField name="text" label="New Todo" value={text} onChange={handleChange} />
       <Button type="submit" color="secondary" variant="contained">
-        Add Todo
+        Add
       </Button>
     </form>
   );

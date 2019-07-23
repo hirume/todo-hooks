@@ -58,28 +58,11 @@ const App = () => {
   return (
     <ThemeProvider theme={isDayTheme ? themeDay : themeNight}>
       <TodoContext.Provider value={dispatchTodos}>
-        <Paper
-          classes={{
-            root: classes.wide
-          }}
-        >
-          <Container
-            maxWidth="md"
-            classes={{
-              root: classes.bg
-            }}
-          >
-            <Paper
-              classes={{
-                root: classes.bg
-              }}
-            >
+      <Paper classes={{ root: classes.wide }}>
+          <Container maxWidth="lg" classes={{ root: classes.bg }}>
+            <Paper classes={{ root: classes.bg }} >
               <AppBar position="static" color="primary">
-                <Toolbar
-                  classes={{
-                    root: classes.header
-                  }}
-                >
+                <Toolbar classes={{ root: classes.header }}>
                   <Typography variant="h6" color="inherit">
                     Todo App
                   </Typography>
@@ -93,7 +76,7 @@ const App = () => {
               <TodoList todos={filteredTodos} />
             </Paper>
           </Container>
-        </Paper>
+</Paper>
       </TodoContext.Provider>
     </ThemeProvider>
   );

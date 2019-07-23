@@ -1,5 +1,6 @@
 html {
   min-height: 100vh;
+  box-sizing: border-box;
 }
 body {
   min-height: 100vh;
@@ -10,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #424242;
+  box-sizing: border-box;
 }
 
 #root {

@@ -9,12 +9,12 @@ export const useStyles = makeStyles(
       paddingTop: "3%",
       paddingBottom: "1%"
     },
+    
     bg: {
       minHeight: "100vh"
     },
 
     wide: {
-      minWidth: "100vh",
       boxSizing: "border-box"
     },
 
